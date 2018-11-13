@@ -1,10 +1,9 @@
 import * as express from "express";
 import * as compression from "compression";
+import index from "./routes/index";
+import hello from "./routes/hello";
 
 const app = express();
-
-const index = require("./routes/index");
-const hello = require("./routes/hello");
 
 app.use(compression());
 app.use(express.json());
