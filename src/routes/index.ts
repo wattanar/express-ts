@@ -5,7 +5,7 @@ const router = express.Router();
 // base_url => /
 
 router.get("/", (req: express.Request, res: express.Response) => {
-  res.json({ message: "Hello, World!" });
+	res.json({ message: "Hello, World!" });
 });
 
-module.exports = router;
+export default router;
