@@ -11,8 +11,9 @@
   "scripts": {
     "build": "./node_modules/.bin/tsc",
     "dev": "./node_modules/.bin/nodemon",
-    "start:win": "set NODE_ENV=production && node dist/server.js",
-    "start:linux": "export NODE_ENV=production && node dist/server.js"
+    "lint": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'",
+    "start:win": "yarn lint && set NODE_ENV=production && node dist/server.js",
+    "start:linux": "yarn lint && export NODE_ENV=production && node dist/server.js"
   },
   "dependencies": {
     "@types/compression": "^0.0.36",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "nodemon": "^1.18.4",
     "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
     "typescript": "^3.1.3"
   }
 }
