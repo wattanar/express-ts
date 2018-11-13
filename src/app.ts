@@ -1,13 +1,14 @@
-import express = require("express");
-import compression = require("compression");
-import * as hello from "./hello";
+const express = require("express");
+const compression = require("compression");
 
 const app = express();
+
+const hello = require("./hello");
 
 app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", hello.index);
+app.use("/", hello);
 
 export default app;
