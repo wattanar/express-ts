@@ -1,3 +1,3 @@
 # express-ts
 
-Create express web development with typescript.
+expressjs with typescript.
