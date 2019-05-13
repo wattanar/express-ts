@@ -7,7 +7,6 @@ import * as logger from "morgan";
 
 // routes
 import index from "./routes/index";
-import hello from "./routes/hello";
 
 const app = express();
 
@@ -23,6 +22,5 @@ app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs");
 
 app.use("/", index);
-app.use("/hello", hello);
 
 export default app;
